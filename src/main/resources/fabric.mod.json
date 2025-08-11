@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "cml-particles",
+	"version": "${version}",
+	"name": "CML-Particles",
+	"description": "CML Team Particles Mod",
+	"authors": [
+		"SJKZ1"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/cml-particles/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.sjkz1.cml_particles.CMLParticles"
+		],
+		"client": [
+			"com.sjkz1.cml_particles.CMLParticlesClient"
+		]
+	},
+	"mixins": [
+		"cml-particles.mixins.json",
+		{
+			"config": "cml-particles.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
